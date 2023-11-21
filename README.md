@@ -24,27 +24,19 @@ inteliJ: git clone
 
 
 Komunikat błędu "Push failed remote: Permission to gitRepoOwner/news_app.git denied to gitUser. unable to access 'https://github.com/gitRepoOwner/news_app.git/': The requested URL returned error: 403" wskazuje, że masz problem z uprawnieniami podczas próby wykonania operacji push na repozytorium Git. Oto kilka kroków, które możesz podjąć, aby rozwiązać ten problem:
-
-Sprawdź swoje Uprawnienia na Repozytorium:
-
-Upewnij się, że masz odpowiednie uprawnienia do repozytorium na GitHub. Aby móc wysyłać zmiany (push), musisz być albo właścicielem repozytorium, albo zostać dodanym jako współpracownik (collaborator) z odpowiednimi uprawnieniami.
-Sprawdź Ustawienia Autentykacji:
-
-Upewnij się, że jesteś prawidłowo uwierzytelniony. Od sierpnia 2021 roku, GitHub wymaga korzystania z tokenów dostępu osobistego (Personal Access Token - PAT) zamiast tradycyjnych haseł do operacji Git na HTTPS.
-Sprawdź, czy używasz tokena dostępu osobistego jako hasła, gdy wykonujesz operację push.
-Utwórz i Skonfiguruj Personal Access Token:
-
-Jeśli nie masz jeszcze tokena, możesz go utworzyć w ustawieniach swojego konta GitHub w sekcji "Developer settings".
-Podczas tworzenia tokena, upewnij się, że nadałeś mu odpowiednie uprawnienia (scopes), takie jak repo, które są potrzebne do operacji na repozytoriach.
-Sprawdź Konfigurację Git:
-
-Sprawdź, czy Twoja konfiguracja Git jest poprawna. Możesz to zrobić, używając polecenia git config --list i sprawdzając, czy Twój użytkownik i email są prawidłowo skonfigurowane.
-Aktualizuj Poświadczenia:
-
-Jeśli wcześniej korzystałeś z hasła, a teraz masz token dostępu osobistego, być może będziesz musiał zaktualizować swoje poświadczenia w menedżerze poświadczeń systemu lub w cache Git.
-Wykonaj Ponownie Push:
-
-Po skonfigurowaniu tokena dostępu i upewnieniu się, że masz odpowiednie uprawnienia, spróbuj ponownie wykonać operację push.
-Sprawdź Konfigurację Remote URL:
-
-Sprawdź, czy adres URL zdalnego repozytorium (remote URL) jest poprawny. Możesz to zrobić za pomocą git remote -v.
+1. Sprawdź swoje Uprawnienia na Repozytorium:
+- Upewnij się, że masz odpowiednie uprawnienia do repozytorium na GitHub. Aby móc wysyłać zmiany (push), musisz być albo właścicielem repozytorium, albo zostać dodanym jako współpracownik (collaborator) z odpowiednimi uprawnieniami.
+2. Sprawdź Ustawienia Autentykacji:
+- Upewnij się, że jesteś prawidłowo uwierzytelniony. Od sierpnia 2021 roku, GitHub wymaga korzystania z tokenów dostępu osobistego (Personal Access Token - PAT) zamiast tradycyjnych haseł do operacji Git na HTTPS.
+- Sprawdź, czy używasz tokena dostępu osobistego jako hasła, gdy wykonujesz operację push.
+3. Utwórz i Skonfiguruj Personal Access Token:
+- Jeśli nie masz jeszcze tokena, możesz go utworzyć w ustawieniach swojego konta GitHub w sekcji "Developer settings".
+- Podczas tworzenia tokena, upewnij się, że nadałeś mu odpowiednie uprawnienia (scopes), takie jak repo, które są potrzebne do operacji na repozytoriach.
+4. Sprawdź Konfigurację Git:
+- Sprawdź, czy Twoja konfiguracja Git jest poprawna. Możesz to zrobić, używając polecenia git config --list i sprawdzając, czy Twój użytkownik i email są prawidłowo skonfigurowane.
+5. Aktualizuj Poświadczenia:
+- Jeśli wcześniej korzystałeś z hasła, a teraz masz token dostępu osobistego, być może będziesz musiał zaktualizować swoje poświadczenia w menedżerze poświadczeń systemu lub w cache Git.
+6. Wykonaj Ponownie Push:
+- Po skonfigurowaniu tokena dostępu i upewnieniu się, że masz odpowiednie uprawnienia, spróbuj ponownie wykonać operację push.
+7. Sprawdź Konfigurację Remote URL:
+- Sprawdź, czy adres URL zdalnego repozytorium (remote URL) jest poprawny. Możesz to zrobić za pomocą git remote -v.
